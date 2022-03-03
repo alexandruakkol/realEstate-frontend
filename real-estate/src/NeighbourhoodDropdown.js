@@ -5,7 +5,6 @@ const NeighbourhoodDropdown = (props) =>{
     var [neighbourhood, setNeighbourhood] = React.useState('Choose neighbourhood');
 
     var data = props.data;
-    if(data === 'reclick'){return <React.Fragment></React.Fragment>}
     if(data)
     {data = Object.values(data)}
 

@@ -43,7 +43,7 @@ const App = () => {
     document.querySelector('#ss').addEventListener('click', () =>{setMode('Studios for sale')});
     document.querySelector('#sr').addEventListener('click', () =>{setMode('Studios for rent')});
 
-    document.querySelector('#dropdownMenuButtonType').addEventListener('click', () =>{setCur_data('reclick')});
+    document.querySelector('#dropdownMenuButtonType').addEventListener('click', () =>{});
     
 },
     []
