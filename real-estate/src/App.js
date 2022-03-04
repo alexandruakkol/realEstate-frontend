@@ -2,10 +2,10 @@ import React from 'react'
 import TypeDropdown from './TypeDropdown';
 import NeighbourhoodDropdown from './NeighbourhoodDropdown';
 import Form from './Form'
-import Checks from './Checks'
-import Radios from './Radios'
 
 const App = () => {
+    //comes from Form.js
+    const [price, setPrice] = React.useState({});
 
     const [cur_data,setCur_data] = React.useState();
     
@@ -48,6 +48,7 @@ const App = () => {
 
     document.querySelector('#dropdownMenuButtonType').addEventListener('click', () =>{});
     
+    
 },
     []
 );
@@ -60,6 +61,9 @@ React.useEffect(() => {
     if(mode === 'Studio for rent'){setCur_data(stdRent)}
 },[mode]);
 
+const transmitToApp = (price_from_form) => {
+    setPrice(price_from_form)
+}
 // add eventlisteners for dropdowns
 
   return (
@@ -70,7 +74,7 @@ React.useEffect(() => {
 
             <NeighbourhoodDropdown data={cur_data}>
             </NeighbourhoodDropdown>
-        <Form></Form>
+        <Form transmitToApp={transmitToApp}></Form>
     </React.Fragment>
   )
 }
