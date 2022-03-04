@@ -7,10 +7,10 @@ const TypeDropdown = (props) =>{
   </button>
   
   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a className="dropdown-item" id='as'>Apartments for sale</a></li>
-    <li><a className="dropdown-item" id='ar'>Apartments for rent</a></li>
-    <li><a className="dropdown-item" id='ss'>Studios for sale</a></li>
-    <li><a className="dropdown-item" id='sr'>Studios for rent</a></li>
+    <li><a className="dropdown-item" id='as'>Apartment for sale</a></li>
+    <li><a className="dropdown-item" id='ar'>Apartment for rent</a></li>
+    <li><a className="dropdown-item" id='ss'>Studio for sale</a></li>
+    <li><a className="dropdown-item" id='sr'>Studio for rent</a></li>
   </ul>
 </div>
 

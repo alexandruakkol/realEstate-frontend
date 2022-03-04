@@ -1,6 +1,10 @@
 import React from 'react'
 import TypeDropdown from './TypeDropdown';
 import NeighbourhoodDropdown from './NeighbourhoodDropdown';
+import Form from './Form'
+import Checks from './Checks'
+import Radios from './Radios'
+
 const App = () => {
 
     const [cur_data,setCur_data] = React.useState();
@@ -9,7 +13,6 @@ const App = () => {
     const [apRent, setApRent] = React.useState({});
     const [stdSale, setStdSale] = React.useState({});
     const [stdRent, setStdRent] = React.useState({});
-
     const [mode, setMode] = React.useState('Choose property type');
  
     const url1 = 'https://real-estate-backend-21.herokuapp.com/apartments-for-rent';
@@ -38,10 +41,10 @@ const App = () => {
     .then(data4 => setStdSale(data4))
     .catch((error) => console.log(error));
 
-    document.querySelector('#as').addEventListener('click', () =>{setMode('Apartments for sale')});
-    document.querySelector('#ar').addEventListener('click', () =>{setMode('Apartments for rent')});
-    document.querySelector('#ss').addEventListener('click', () =>{setMode('Studios for sale')});
-    document.querySelector('#sr').addEventListener('click', () =>{setMode('Studios for rent')});
+    document.querySelector('#as').addEventListener('click', () =>{setMode('Apartment for sale')});
+    document.querySelector('#ar').addEventListener('click', () =>{setMode('Apartment for rent')});
+    document.querySelector('#ss').addEventListener('click', () =>{setMode('Studio for sale')});
+    document.querySelector('#sr').addEventListener('click', () =>{setMode('Studio for rent')});
 
     document.querySelector('#dropdownMenuButtonType').addEventListener('click', () =>{});
     
@@ -50,11 +53,13 @@ const App = () => {
 );
 
 React.useEffect(() => {
-    if(mode === 'Apartments for sale'){setCur_data(apSale)}
-    if(mode === 'Apartments for rent'){setCur_data(apRent)}
-    if(mode === 'Studios for sale'){setCur_data(stdSale)}
-    if(mode === 'Studios for rent'){setCur_data(stdRent)}
+
+    if(mode === 'Apartment for sale'){setCur_data(apSale)}
+    if(mode === 'Apartment for rent'){setCur_data(apRent)}
+    if(mode === 'Studio for sale'){setCur_data(stdSale)}
+    if(mode === 'Studio for rent'){setCur_data(stdRent)}
 },[mode]);
+
 // add eventlisteners for dropdowns
 
   return (
@@ -65,6 +70,7 @@ React.useEffect(() => {
 
             <NeighbourhoodDropdown data={cur_data}>
             </NeighbourhoodDropdown>
+        <Form></Form>
     </React.Fragment>
   )
 }

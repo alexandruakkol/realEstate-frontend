@@ -1,8 +1,14 @@
 import React from 'react'
 
 const NeighbourhoodDropdown = (props) =>{
-
     var [neighbourhood, setNeighbourhood] = React.useState('Choose neighbourhood');
+    
+    React.useEffect(() => {
+
+        setNeighbourhood('Choose neighbourhood');
+    },[props.data])
+
+    
 
     var data = props.data;
     if(data)
