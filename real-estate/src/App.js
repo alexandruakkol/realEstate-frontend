@@ -19,6 +19,8 @@ const App = () => {
     const url2= 'https://real-estate-backend-21.herokuapp.com/apartments-for-sale';
     const url3 = 'https://real-estate-backend-21.herokuapp.com/studios-for-rent';
     const url4 = 'https://real-estate-backend-21.herokuapp.com/studios-for-sale';
+
+    //run on start only
     React.useEffect( () =>{
 
     fetch(url1)
