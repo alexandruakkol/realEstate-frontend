@@ -74,14 +74,13 @@ const transmitToApp = (data_from_form) => {
 // add eventlisteners for dropdowns
 
   return (
-
     <React.Fragment>
         <TypeDropdown name={mode}>
         </TypeDropdown>
 
             <NeighbourhoodDropdown data={cur_data} transmitNeighbourhood={transmitNeighbourhood}>
             </NeighbourhoodDropdown>
-        <Form transmitToApp={transmitToApp}></Form>
+        <Form transmitToApp={transmitToApp} neighbourhood={neighbourhood}></Form>
     </React.Fragment>
   )
 }

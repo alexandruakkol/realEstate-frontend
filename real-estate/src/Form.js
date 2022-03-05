@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ transmitToApp }) => {
+const Form = ({ transmitToApp,neighbourhood}) => {
   const [price, setPrice] = React.useState("");
   const [metro, setMetro] = React.useState("");
   const [area, setArea] = React.useState("");
@@ -15,10 +15,14 @@ const Form = ({ transmitToApp }) => {
     e.preventDefault();
   };
 
+  //conditional return 
+  if(Object.keys(neighbourhood).length !== 0){
   return (
     <form onSubmit={handleSubmit}>
       {/* Text area */}
-      <label htmlFor="price">Price</label>
+      <label className="required-field" htmlFor="price">
+        Price (€)
+      </label>
       <input
         type="text"
         id="price"
@@ -26,10 +30,14 @@ const Form = ({ transmitToApp }) => {
         onChange={(e) => {
           setPrice(e.target.value);
         }}
+        minLength='5'
+        required
       ></input>
 
       <div className="areaForm">
-        <label htmlFor="area">Area (m²)</label>
+        <label className="required-field" htmlFor="area">
+          Area (m²)
+        </label>
         <input
           type="text"
           id="area"
@@ -37,11 +45,13 @@ const Form = ({ transmitToApp }) => {
           onChange={(e) => {
             setArea(e.target.value);
           }}
+          maxLength="3"
+          required
         ></input>
       </div>
 
       <div className="metroDiv">
-        <label htmlFor="metroDistance">Distance to metro (m)</label>
+        <label htmlFor="metroDistance">Distance to metro (meters)</label>
         <input
           type="text"
           id="metroDistance"
@@ -49,6 +59,7 @@ const Form = ({ transmitToApp }) => {
           onChange={(e) => {
             setMetro(e.target.value);
           }}
+          maxLength='5'
         ></input>
       </div>
       {/* Checkbox area */}
@@ -84,7 +95,7 @@ const Form = ({ transmitToApp }) => {
       <section className="radios">
         {/* Year built radios */}
         <div className="yearRadios">
-          <p>Building year:</p>
+          <p className="required-field" >Building year:</p>
           <div>
             <input
               type="radio"
@@ -93,6 +104,7 @@ const Form = ({ transmitToApp }) => {
               onChange={(e) => {
                 setYear(e.target.id);
               }}
+              required
             ></input>
             <label htmlFor="<1950">&#60;1950</label>
           </div>
@@ -205,13 +217,24 @@ const Form = ({ transmitToApp }) => {
       <button
         type="submit"
         onClick={() => {
-          transmitToApp({ price: price, metro: metro, area: area, central:central, mixed: mixed, rehab: rehab, year: year, floor: floor, condition: condition});
+          transmitToApp({
+            price: price,
+            metro: metro,
+            area: area,
+            central: central,
+            mixed: mixed,
+            rehab: rehab,
+            year: year,
+            floor: floor,
+            condition: condition,
+          });
         }}
       >
         Submit
       </button>
     </form>
-  );
+  );}
+  return <React.Fragment></React.Fragment>
 };
 
 export default Form;
