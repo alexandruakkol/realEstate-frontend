@@ -2,7 +2,7 @@ import React from "react";
 import TypeDropdown from "./TypeDropdown";
 import NeighbourhoodDropdown from "./NeighbourhoodDropdown";
 import Form from "./Form";
-import compute from "./compute.js";
+import compute from "./Compute.js";
 
 const App = () => {
   //comes from Form.js
@@ -15,7 +15,7 @@ const App = () => {
   const [stdSale, setStdSale] = React.useState({});
   const [stdRent, setStdRent] = React.useState({});
   const [mode, setMode] = React.useState("Choose property type");
-
+  const [results, setResults] = React.useState('')
   const url1 =
     "https://real-estate-backend-21.herokuapp.com/apartments-for-rent";
   const url2 =
@@ -96,9 +96,7 @@ const App = () => {
     });
   };
   React.useEffect(() => {
-    const results = compute(submitted);
-    console.log(submitted);
-    console.log("Appjs results: ", results);
+    setResults(compute(submitted));
   }, [submitted]);
 
   // add eventlisteners for dropdowns
@@ -112,6 +110,7 @@ const App = () => {
         transmitNeighbourhood={transmitNeighbourhood}
       ></NeighbourhoodDropdown>
       <Form transmitToApp={transmitToApp} neighbourhood={neighbourhood}></Form>
+      <div>{results || ''}</div>
     </React.Fragment>
   );
 };

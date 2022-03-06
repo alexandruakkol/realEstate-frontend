@@ -1,7 +1,6 @@
 import React from "react";
 
 const Form = ({ transmitToApp,neighbourhood}) => {
-  const [price, setPrice] = React.useState("");
   const [metro, setMetro] = React.useState("");
   const [area, setArea] = React.useState("");
   const [central, setCentral] = React.useState(false);
@@ -20,20 +19,6 @@ const Form = ({ transmitToApp,neighbourhood}) => {
   return (
     <form onSubmit={handleSubmit}>
       {/* Text area */}
-      <label className="required-field" htmlFor="price">
-        Price (€)
-      </label>
-      <input
-        type="text"
-        id="price"
-        value={price}
-        onChange={(e) => {
-          setPrice(e.target.value);
-        }}
-        minLength='5'
-        required
-      ></input>
-
       <div className="areaForm">
         <label className="required-field" htmlFor="area">
           Area (m²)
@@ -231,7 +216,6 @@ const Form = ({ transmitToApp,neighbourhood}) => {
         type="submit"
         onClick={() => {
           transmitToApp({
-            price: price,
             metro: metro,
             area: area,
             central: central,

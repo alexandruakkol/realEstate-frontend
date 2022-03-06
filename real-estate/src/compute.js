@@ -1,7 +1,6 @@
 function compute(submitted) {
-  const {
+  let {
     neighPrice,
-    price,
     area,
     year,
     mode,
@@ -12,6 +11,8 @@ function compute(submitted) {
     mixed,
     rehab,
   } = submitted;
+
+  metro = parseInt(metro);
 
   //TODO make function for preferences
   // coefficients
@@ -38,16 +39,34 @@ function compute(submitted) {
   const turnkey_adj = 1.03;
 
   let CentralAdjustment = 0;
-  const central_adj = 0.975;
+  const no_central_adj_rent = 0.88;
+  const no_central_adj_cash = -1800;
 
   let MixedAdjustment = 0;
   const mixed_adj = 1.04;
 
   let RehabAdjustment = 0;
-  const rehab_adj = 1.12;
+  const rehab_adj = 1.1;
 
   let baseValuation = area * neighPrice;
   console.log("Base valuation is: ", baseValuation);
+
+  switch (true) {
+    case metro < 400:
+      MetroAdjustment = baseValuation * closeM_adj - baseValuation;
+      break;
+    case metro < 800:
+      MetroAdjustment = baseValuation * midM_adj - baseValuation;
+      break;
+    case metro < 1401:
+      MetroAdjustment = baseValuation * farM_adj - baseValuation;
+      break;
+    case metro > 1400:
+      MetroAdjustment = baseValuation * noM_adj - baseValuation;
+      break;
+    default:
+      break;
+  }
 
   switch (floor) {
     case "midFloor":
@@ -60,7 +79,21 @@ function compute(submitted) {
       FloorAdjustment = baseValuation * groundFloor_adj - baseValuation;
       break;
     default:
-      return "error";
+      break;
+  }
+
+  switch (condition) {
+    case "shell":
+      StateAdjustment = baseValuation * shell_adj - baseValuation;
+      break;
+    case "finished":
+      StateAdjustment = baseValuation * finish_adj - baseValuation;
+      break;
+    case "turnkey":
+      StateAdjustment = baseValuation * turnkey_adj - baseValuation;
+      break;
+    default:
+      break;
   }
 
   switch (year) {
@@ -71,16 +104,30 @@ function compute(submitted) {
       YearAdjustment = baseValuation * y1950_1977_adj - baseValuation;
       break;
     case "1977-1990":
-        YearAdjustment = baseValuation * y1977_1990_adj - baseValuation;
+      YearAdjustment = baseValuation * y1977_1990_adj - baseValuation;
       break;
     case ">1990":
-        YearAdjustment = baseValuation * y1990plus_adj - baseValuation;
+      YearAdjustment = baseValuation * y1990plus_adj - baseValuation;
       break;
     default:
-      return "error";
+      break;
   }
 
-  const result =
+  if (!central) {
+    if (mode === "Apartment for rent" || mode === "Studio for rent") {
+      CentralAdjustment = baseValuation * no_central_adj_rent - baseValuation;
+    } else {
+      CentralAdjustment = no_central_adj_cash;
+    }
+  }
+  if (mixed) {
+    MixedAdjustment = baseValuation * mixed_adj - baseValuation;
+  }
+  if (rehab) {
+    RehabAdjustment = baseValuation * rehab_adj - baseValuation;
+  }
+
+  let result =
     baseValuation +
     FloorAdjustment +
     YearAdjustment +
@@ -89,7 +136,8 @@ function compute(submitted) {
     CentralAdjustment +
     MixedAdjustment +
     RehabAdjustment;
-
+ 
+result = Math.trunc(result)
   return result;
 }
 export default compute;
