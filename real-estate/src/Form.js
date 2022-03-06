@@ -17,13 +17,14 @@ const Form = ({ transmitToApp,neighbourhood}) => {
   //conditional return 
   if(Object.keys(neighbourhood).length !== 0){
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='mainForm' onSubmit={handleSubmit}>
       {/* Text area */}
       <div className="areaForm">
         <label className="required-field" htmlFor="area">
           Area (m²)
         </label>
         <input
+        pattern ='[0-9]+$'
           type="text"
           id="area"
           value={area}
@@ -38,6 +39,7 @@ const Form = ({ transmitToApp,neighbourhood}) => {
       <div className="metroDiv">
         <label htmlFor="metroDistance">Distance to metro (meters)</label>
         <input
+        pattern ='[0-9]+$'
           type="text"
           id="metroDistance"
           value={metro}
@@ -80,7 +82,7 @@ const Form = ({ transmitToApp,neighbourhood}) => {
       <section className="radios">
         {/* Year built radios */}
         <div className="yearRadios">
-          <p className="required-field" >Building year:</p>
+          <p >Building year:</p>
           <div>
             <input
               type="radio"
@@ -89,7 +91,6 @@ const Form = ({ transmitToApp,neighbourhood}) => {
               onChange={(e) => {
                 setYear(e.target.id);
               }}
-              required
             ></input>
             <label htmlFor="<1950">&#60;1950</label>
           </div>

@@ -15,7 +15,7 @@ const App = () => {
   const [stdSale, setStdSale] = React.useState({});
   const [stdRent, setStdRent] = React.useState({});
   const [mode, setMode] = React.useState("Choose property type");
-  const [results, setResults] = React.useState('')
+  const [results, setResults] = React.useState("");
   const url1 =
     "https://real-estate-backend-21.herokuapp.com/apartments-for-rent";
   const url2 =
@@ -59,10 +59,6 @@ const App = () => {
     document.querySelector("#sr").addEventListener("click", () => {
       setMode("Studio for rent");
     });
-
-    document
-      .querySelector("#dropdownMenuButtonType")
-      .addEventListener("click", () => {});
   }, []);
 
   React.useEffect(() => {
@@ -84,6 +80,9 @@ const App = () => {
     setNeighbourhood(nb);
   };
   const transmitToApp = (data_from_form) => {
+    if(!data_from_form.area){
+        document.querySelector('#area').classList.add('error');
+}
     let neighbourhoodPrice = Object.values(
       cur_data.data.find(
         (x) => Object.keys(x)[0] === neighbourhood.neighbourhood
@@ -110,7 +109,7 @@ const App = () => {
         transmitNeighbourhood={transmitNeighbourhood}
       ></NeighbourhoodDropdown>
       <Form transmitToApp={transmitToApp} neighbourhood={neighbourhood}></Form>
-      <div>{results || ''}</div>
+      <div>{results || ""}</div>
     </React.Fragment>
   );
 };
