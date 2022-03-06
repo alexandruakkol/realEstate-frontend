@@ -8,7 +8,7 @@ const Form = ({ transmitToApp,neighbourhood}) => {
   const [mixed, setMixed] = React.useState(false);
   const [rehab, setRehab] = React.useState(false);
   const [year, setYear] = React.useState("");
-  const [floor, setFloor] = React.useState("");
+  const [floor, setFloor] = React.useState("midFloor");
   const [condition, setCondition] = React.useState("finish");
 
   const handleSubmit = (e) => {
@@ -147,8 +147,21 @@ const Form = ({ transmitToApp,neighbourhood}) => {
         </div>
 
         {/* Floor radios*/}
+        
         <div className="floorRadios">
           <p>Floor:</p>
+          <div>
+            <input
+              type="radio"
+              id="midFloor"
+              name="floor"
+              onChange={(e) => {
+                setFloor(e.target.id);
+              }}
+            ></input>
+            <label htmlFor="midFloor">Mid Floor</label>
+          </div>
+
           <div>
             <input
               type="radio"
