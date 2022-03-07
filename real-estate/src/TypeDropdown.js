@@ -1,6 +1,6 @@
 const TypeDropdown = (props) => {
   return (
-    <div className="dropdown">
+    <div className="dropdown typeDropdown">
       <button
         className="btn btn-secondary dropdown-toggle"
         type="button"
@@ -10,7 +10,6 @@ const TypeDropdown = (props) => {
       >
         {props.name}
       </button>
-      <div id='getStarted'>Get started</div>
 
       <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li>

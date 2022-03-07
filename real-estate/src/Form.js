@@ -20,13 +20,14 @@ const Form = ({ transmitToApp,neighbourhood}) => {
     <form className='mainForm' onSubmit={handleSubmit}>
       {/* Text area */}
       <div className="areaForm">
-        <label className="required-field" htmlFor="area">
+        <label className="areaLabel required-field" htmlFor="area">
           Area (m²)
         </label>
         <input
         pattern ='[0-9]+$'
           type="text"
           id="area"
+          placeholder="52"
           value={area}
           onChange={(e) => {
             setArea(e.target.value);
@@ -37,10 +38,11 @@ const Form = ({ transmitToApp,neighbourhood}) => {
       </div>
 
       <div className="metroDiv">
-        <label htmlFor="metroDistance">Distance to metro (meters)</label>
+        <label className='metroLabel' htmlFor="metroDistance">Distance to metro (meters)</label>
         <input
         pattern ='[0-9]+$'
           type="text"
+          placeholder="600"
           id="metroDistance"
           value={metro}
           onChange={(e) => {

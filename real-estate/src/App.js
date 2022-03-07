@@ -5,7 +5,7 @@ import Form from "./Form";
 import compute from "./Compute.js";
 
 const App = () => {
-  //comes from Form.js
+
   const [submitted, setSubmitted] = React.useState({});
 
   const [cur_data, setCur_data] = React.useState();
@@ -59,6 +59,10 @@ const App = () => {
     document.querySelector("#sr").addEventListener("click", () => {
       setMode("Studio for rent");
     });
+    //Get Started button
+    document.querySelector('.btn-success').addEventListener('click', () => {
+        document.querySelector('#leftDiv2').scrollIntoView();
+    })
   }, []);
 
   React.useEffect(() => {
