@@ -10,6 +10,7 @@ const TypeDropdown = (props) => {
       >
         {props.name}
       </button>
+      <div id='getStarted'>Get started</div>
 
       <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li>
