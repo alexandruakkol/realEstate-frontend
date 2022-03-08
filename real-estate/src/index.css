@@ -209,7 +209,7 @@ a {
   overflow-x: hidden;
 }
 Form {
-  margin-top: 10rem;
+  margin-top: 8rem;
   margin-left: 12rem;
   padding-top: 1rem;
   padding-left: 7rem;
@@ -221,8 +221,8 @@ Form {
   font-family: "Lato", sans-serif;
 }
 .result {
-    text-align: center;
-    border: 7px solid var(--color2);
+  text-align: center;
+  border: 7px solid var(--color2);
   margin-top: 35px;
   font-size: 30px;
   padding: 20px;
