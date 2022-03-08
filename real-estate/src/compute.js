@@ -139,6 +139,6 @@ function compute(submitted) {
  
 result = Math.trunc(result)
 if(!area){return undefined}
-  return result;
+  return result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
 }
 export default compute;

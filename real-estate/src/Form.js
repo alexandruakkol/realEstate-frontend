@@ -20,7 +20,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
       <form className="mainForm" onSubmit={handleSubmit}>
         {/* Text area */}
         <div className="areaForm">
-          <label className="areaLabel required-field" htmlFor="area">
+          <label className="areaLabel required-field title" htmlFor="area">
             Area (m²)
           </label>
           <input
@@ -38,7 +38,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
         </div>
 
         <div className="metroDiv">
-          <label className="metroLabel" htmlFor="metroDistance">
+          <label className="metroLabel title" htmlFor="metroDistance">
             Distance to metro (meters)
           </label>
           <input
@@ -97,7 +97,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
         <section className="radios">
           {/* Year built radios */}
           <div className="yearRadios">
-            <p>Building year:</p>
+            <p className='title'>Building year:</p>
             <div>
               <input
               className='form-check-input'
@@ -154,7 +154,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
           {/* Floor radios*/}
 
           <div className="floorRadios">
-            <p>Floor:</p>
+            <p className='title'>Floor:</p>
             <div>
               <input
               className='form-check-input'
@@ -197,7 +197,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
 
           {/* Condition radios*/}
           <div className="conditionRadios">
-            <p>Condition</p>
+            <p className='title'>Condition</p>
             <div>
               <input
               className='form-check-input'
@@ -240,7 +240,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
         </section>
         <button
           type="submit"
-          className='btn btn-outline-success submit-btn'
+          className='btn btn-success submit-btn'
           onClick={() => {
             transmitToApp({
               metro: metro,
