@@ -87,10 +87,12 @@ h1 {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 0.83fr 0fr 0.5fr;
-  height: 300px;
+  height: 100vh;
 }
+
 #rightDiv2 {
-  background-image: url("https://images.unsplash.com/photo-1571079977652-fdd830b2eb63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGJ1Y2hhcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+  
+  background-image: url("https://images.unsplash.com/photo-1584646098378-0874589d76b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #bdffdb; /* Tint color */
@@ -103,6 +105,8 @@ h1 {
 }
 
 #leftDiv2 {
+    height: 100vh;
+    background-color: var(--color1);
 }
 .buttonCont {
   text-align: center;
@@ -114,7 +118,8 @@ h1 {
   padding-top: 10px;
 }
 Form {
-  margin-left: 100px;
+  margin-top: 125px;
+  margin-left: 200px;
   text-align: left;
   font-size: 20px;
 }
@@ -122,6 +127,7 @@ Form {
 .dropdown-toggle {
   width: 300px;
   border-radius: 5px;
+    font-size:20px;
 }
 .areaLabel {
   margin-right: 150px;
@@ -133,5 +139,63 @@ input[type="text"] {
   background-color: #5dffce;
   border-radius: 7px;
 }
-input[type="checkbox"] {
+
+.checks {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+label {
+  margin-left: 2.5px;
+}
+.result {
+  margin-top: 35px;
+  font-size: 30px;
+  margin-left: 53px;
+  color: rgb(45, 45, 45);
+}
+.submit-btn {
+  margin-top: 25px;
+  background-color: #5dffce;
+  color: black;
+  padding: 5px 40px 5px 40px;
+}
+#dataButton{
+margin-top:20px;
+background-color: #68686858;
+}
+
+#gridContainer3 {
+    margin: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 0.83fr 0fr 0.5fr;
+    height: 100vh;
+  }
+  
+  #rightDiv3 {
+    background-image: url("https://images.unsplash.com/photo-1571079977652-fdd830b2eb63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGJ1Y2hhcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #bdffdb; /* Tint color */
+    background-blend-mode: multiply;
+    height: 100vh;
+    border: 0.5px solid var(--color2);
+  }
+  #middleDiv3 {
+    background-color: var(--color1);
+  }
+  
+  #leftDiv3 {
+      height:100vh;
+      background-color: var(--color1);
+
+  }
+  .surse{
+      text-align: left;
+      margin-top:20px;
+      font-size:23px;
+      margin-left:10px;
+  }
+  a{
+      color:black;
+  }

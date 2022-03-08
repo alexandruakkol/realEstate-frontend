@@ -5,7 +5,6 @@ import Form from "./Form";
 import compute from "./Compute.js";
 
 const App = () => {
-
   const [submitted, setSubmitted] = React.useState({});
 
   const [cur_data, setCur_data] = React.useState();
@@ -60,9 +59,12 @@ const App = () => {
       setMode("Studio for rent");
     });
     //Get Started button
-    document.querySelector('.btn-success').addEventListener('click', () => {
-        document.querySelector('#leftDiv2').scrollIntoView();
-    })
+    document.querySelector(".btn-success").addEventListener("click", () => {
+      document.querySelector("#leftDiv2").scrollIntoView();
+    });
+    document.querySelector("#dataButton").addEventListener("click", () => {
+        document.querySelector("#leftDiv3").scrollIntoView();
+      });
   }, []);
 
   React.useEffect(() => {
@@ -84,9 +86,9 @@ const App = () => {
     setNeighbourhood(nb);
   };
   const transmitToApp = (data_from_form) => {
-    if(!data_from_form.area){
-        document.querySelector('#area').classList.add('error');
-}
+    if (!data_from_form.area) {
+      document.querySelector("#area").classList.add("error");
+    }
     let neighbourhoodPrice = Object.values(
       cur_data.data.find(
         (x) => Object.keys(x)[0] === neighbourhood.neighbourhood
@@ -113,7 +115,9 @@ const App = () => {
         transmitNeighbourhood={transmitNeighbourhood}
       ></NeighbourhoodDropdown>
       <Form transmitToApp={transmitToApp} neighbourhood={neighbourhood}></Form>
-      <div>{results || ""}</div>
+      <React.Fragment>
+        {results ? <div className="result">Estimate: €{results}</div> : ""}
+      </React.Fragment>
     </React.Fragment>
   );
 };
