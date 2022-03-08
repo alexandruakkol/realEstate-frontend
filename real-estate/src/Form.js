@@ -27,7 +27,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
             pattern="[0-9]+$"
             type="text"
             id="area"
-            placeholder="52"
+            placeholder="ex. 52"
             value={area}
             onChange={(e) => {
               setArea(e.target.value);
@@ -59,6 +59,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
           <div>
             
             <input
+            className='form-check-input'
               type="checkbox"
               id="heating"
               onChange={() => {
@@ -71,6 +72,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
           <div>
             
             <input
+            className='form-check-input'
               type="checkbox"
               id="mixed"
               onChange={() => {
@@ -82,6 +84,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
           <div>
             
             <input
+            className='form-check-input'
               type="checkbox"
               id="rehab"
               onChange={() => {
@@ -97,6 +100,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
             <p>Building year:</p>
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="<1950"
                 name="year"
@@ -109,6 +113,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
 
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="1950-1977"
                 name="year"
@@ -121,6 +126,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
 
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="1977-1990"
                 name="year"
@@ -133,6 +139,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
 
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id=">1990"
                 name="year"
@@ -150,6 +157,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
             <p>Floor:</p>
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="midFloor"
                 name="floor"
@@ -162,6 +170,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
 
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="groundFloor"
                 name="floor"
@@ -174,6 +183,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
 
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="lastFloor"
                 name="floor"
@@ -190,6 +200,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
             <p>Condition</p>
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="shell"
                 name="condition"
@@ -202,6 +213,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
 
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="finish"
                 name="condition"
@@ -214,6 +226,7 @@ const Form = ({ transmitToApp, neighbourhood }) => {
 
             <div>
               <input
+              className='form-check-input'
                 type="radio"
                 id="turnkey"
                 name="condition"

@@ -138,6 +138,7 @@ function compute(submitted) {
     RehabAdjustment;
  
 result = Math.trunc(result)
+if(!area){return undefined}
   return result;
 }
 export default compute;

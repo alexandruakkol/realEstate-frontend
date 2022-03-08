@@ -102,6 +102,7 @@ const App = () => {
   };
   React.useEffect(() => {
     setResults(compute(submitted));
+
   }, [submitted]);
 
   // add eventlisteners for dropdowns

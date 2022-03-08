@@ -24,7 +24,7 @@ const NeighbourhoodDropdown = (props) => {
 
   if (data) {
     return (
-      <div className="dropdown">
+      <div className="dropdown neighDropdown">
         <button
           className="btn btn-secondary dropdown-toggle"
           type="button"
@@ -34,7 +34,7 @@ const NeighbourhoodDropdown = (props) => {
         >
           {neighbourhood}
         </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <ul className="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton1">
           {data[0].map((item) => {
             return (
               <div>
