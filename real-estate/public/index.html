@@ -14,6 +14,7 @@
     ></script>
 
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +39,7 @@
   <body class='wrapper' id="body">
     <header></header>
     <div id="gridContainer1">
-      <div id="leftDiv">
+      <div id="leftDiv" class="leftDiv">
         <div id="h1Cont">
           <h1>
             ESTIMATE REAL ESTATE<br />
@@ -48,37 +49,33 @@
         <div class="buttonCont">
           <button
             type="button"
-            class="d-grid gap-2 col-6 mx-auto btn btn-success"
+            class="d-grid gap-2 col-6 btn btn-success mainButton"
           >
             Get started
           </button>
         </div>
         <div class="buttonCont">
-          <button type="button" id="dataButton" class="mx-auto btn btn-success">
+          <button type="button" id="dataButton" class="mx-auto btn btn-success mainButton">
             Data source & calculation
           </button>
         </div>
 
-        <div id="mainDiv"></div>
+        <div id="mainDiv" ></div>
       </div>
-      <div id="middleDiv"></div>
-      <div id="rightDiv"></div>
+      <div id="rightDiv" class="imageDiv"></div>
     </div>
-    <div class="secondDiv"></div>
 
     <div id="gridContainer2">
       <div id="leftDiv2"></div>
-      <div id="middleDiv2"></div>
-      <div id="rightDiv2"></div>
+      <div id="rightDiv2" class="imageDiv"></div>
     </div>
 
     <div id="gridContainer3">
-      <div id="leftDiv3">
+      <div id="leftDiv3" class="leftDiv">
         <p class='sources'>Base data source: <a href='https://compariimobiliare.ro/pret-imobil'>compariimobiliare.ro</a></a></p>
         <p class="sources">The valuation does have its inaccuracies. It is a proof-of-concept and should be treated as such.</p>
       </div>
-      <div id="middleDiv3"></div>
-      <div id="rightDiv3"></div>
+      <div id="rightDiv3" class="imageDiv"></div>
     </div>
 
     <div id="mainDiv"></div>
