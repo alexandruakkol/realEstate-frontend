@@ -2,7 +2,7 @@ import React from "react";
 import TypeDropdown from "./TypeDropdown";
 import NeighbourhoodDropdown from "./NeighbourhoodDropdown";
 import Form from "./Form";
-import compute from "./Compute.js";
+import compute from "./compute.js";
 
 const App = () => {
   const [submitted, setSubmitted] = React.useState({});
