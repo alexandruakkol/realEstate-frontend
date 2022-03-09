@@ -59,7 +59,7 @@ const App = () => {
       setMode("Studio for rent");
     });
     //Get Started button
-    document.querySelector(".btn-success").addEventListener("click", () => {
+    document.querySelector(".mainButton").addEventListener("click", () => {
       document.querySelector("#leftDiv2").scrollIntoView();
     });
     document.querySelector("#dataButton").addEventListener("click", () => {
