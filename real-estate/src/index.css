@@ -6,7 +6,7 @@
 }
 * {
   font-family: "Ubuntu", "Arial";
-  max-height:2800px;
+
 }
 .required-field::after {
   content: "*";
@@ -23,12 +23,6 @@ header {
   text-align: center;
   line-height: 7vh;
   width:107vw;
-}
-.leftDiv {
-  height: 100vh;
-}
-.middleDiv {
-  height: 100vh;
 }
 .imageDiv {
   background-repeat: no-repeat;
@@ -169,7 +163,7 @@ a {
   overflow-x: hidden;
 }
 Form {
-  margin-right: 2rem;
+  margin-right: 10rem;
   margin-top: 2.5rem;
   margin-left: 4rem;
   padding-top: 1rem;
@@ -182,7 +176,7 @@ Form {
   max-width: 700px;
 }
 form {
-  height: 75vh;
+  height: 56vh;
 }
 .result {
   text-align: center;
@@ -207,13 +201,12 @@ label {
 }
 .photosGrid{
   display:grid;
-  grid-template-rows: 100vh 100vh 100vh;
-
+  grid-template-rows: 95vh 95vh 95vh;
 }
 .leftDiv{
+  height:300vh;
   background-color: var(--color1);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23c4b69d' fill-opacity='0.06'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.06'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
-  height:250vh;
 }
 .wrapper{
   overflow-x:hidden;
@@ -224,8 +217,6 @@ label {
   position:relative;
   transform-style:preserve-3d;
   z-index:-1;
-}
-.leftDiv{
 }
 .photosGrid{
   transform:translateZ(3px) scale(1);
@@ -239,16 +230,16 @@ label {
   grid-template-columns:1 1 1;
 }
 .imageDiv{
-  height:110vh;
+  height:96vh;
   margin-left:12.5vw;
   margin-right:-20vw;
-  background-size: 75vh;
+  background-size: 72vh;
+margin-top:13vh;
 }
-.section1{
+.section1,
+.section2,
+.section3{
   height:94vh;
-}
-.section2{
-  height:30vw;
 }
 .appDiv{
   margin-left:5vw;
@@ -256,6 +247,6 @@ label {
 .wrapper{
   scroll-behavior: smooth;
 }
-.section3{
-  margin-top:19vh;
+.sources{
+  margin-top:4vh;
 }

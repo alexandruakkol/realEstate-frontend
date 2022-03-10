@@ -60,7 +60,7 @@ const App = () => {
     });
     //Get Started button
     document.querySelector(".mainButton").addEventListener("click", () => {
-      document.querySelector('.wrapper').scrollTo(0, 1755);
+      document.querySelector(".appStart").scrollIntoView();
     });
     document.querySelector("#dataButton").addEventListener("click", () => {
         document.querySelector("App").scrollIntoView();
