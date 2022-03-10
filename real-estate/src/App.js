@@ -60,10 +60,10 @@ const App = () => {
     });
     //Get Started button
     document.querySelector(".mainButton").addEventListener("click", () => {
-      document.querySelector("#leftDiv2").scrollIntoView();
+      document.querySelector('.wrapper').scrollTo(0, 1755);
     });
     document.querySelector("#dataButton").addEventListener("click", () => {
-        document.querySelector("#leftDiv3").scrollIntoView();
+        document.querySelector("App").scrollIntoView();
       });
   }, []);
 

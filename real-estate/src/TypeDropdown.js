@@ -2,7 +2,7 @@ const TypeDropdown = (props) => {
   return (
     <div className="dropdown typeDropdown">
       <button
-        className="btn btn-secondary dropdown-toggle"
+        className="btn btn-secondary dropdown-toggle appStart"
         type="button"
         id="dropdownMenuButtonType"
         data-bs-toggle="dropdown"
