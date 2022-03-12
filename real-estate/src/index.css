@@ -175,11 +175,12 @@ a {
 .result {
   text-align: center;
   border: 7px solid var(--color2);
+  font-weight:bolder;
   margin-top: 1.5rem;
   font-size: 2rem;
   padding: 1.5rem;
-  margin-right: 10rem;
-  margin-left: 4rem;
+  margin-right: 20vw;
+  margin-left: 75px;
   max-width: 700px;
   color: rgb(45, 45, 45);
 }
@@ -222,7 +223,6 @@ a {
   margin-top: 13vh;
 }
 .section1,
-.section2,
 .section3 {
   height: 94vh;
 }
