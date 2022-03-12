@@ -63,7 +63,7 @@ const App = () => {
       document.querySelector(".appStart").scrollIntoView();
     });
     document.querySelector("#dataButton").addEventListener("click", () => {
-        document.querySelector("App").scrollIntoView();
+        document.querySelector(".sources").scrollIntoView();
       });
   }, []);
 
