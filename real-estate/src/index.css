@@ -6,6 +6,10 @@
 }
 * {
   font-family: "Ubuntu", "Arial";
+  
+}
+body{
+  overflow:hidden;
 }
 .required-field::after {
   content: "*";
@@ -16,13 +20,14 @@
   border-color: #ff3860;
 }
 header {
+  text-align: right;
   height: 5.5vh;
   background-color: var(--colorHeader);
   font-size: 25px;
-  text-align: center;
   line-height: 7vh;
   width: 107vw;
 }
+.github{margin-right:9vw;}
 .imageDiv {
   background-repeat: no-repeat;
   background-size: cover;
@@ -225,6 +230,9 @@ a {
 .section1,
 .section3 {
   height: 94vh;
+}
+.section2{
+  min-height: 90vh;
 }
 .appDiv {
   margin-left: 5vw;
