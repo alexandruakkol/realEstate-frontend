@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/alexandruakkol/realEstate-frontend/static/css/main.797f2dc8.css",
-    "main.js": "/alexandruakkol/realEstate-frontend/static/js/main.934d508b.js",
+    "main.css": "/alexandruakkol/realEstate-frontend/static/css/main.e585883b.css",
+    "main.js": "/alexandruakkol/realEstate-frontend/static/js/main.15c48b63.js",
     "index.html": "/alexandruakkol/realEstate-frontend/index.html",
-    "main.797f2dc8.css.map": "/alexandruakkol/realEstate-frontend/static/css/main.797f2dc8.css.map",
-    "main.934d508b.js.map": "/alexandruakkol/realEstate-frontend/static/js/main.934d508b.js.map"
+    "main.e585883b.css.map": "/alexandruakkol/realEstate-frontend/static/css/main.e585883b.css.map",
+    "main.15c48b63.js.map": "/alexandruakkol/realEstate-frontend/static/js/main.15c48b63.js.map"
   },
   "entrypoints": [
-    "static/css/main.797f2dc8.css",
-    "static/js/main.934d508b.js"
+    "static/css/main.e585883b.css",
+    "static/js/main.15c48b63.js"
   ]
 }
