@@ -8,28 +8,28 @@ const TypeDropdown = (props) => {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        {props.name}
+        {props.isEnglish ? props.name : "Alege tipul proprietății"}
       </button>
 
       <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li>
           <a className="dropdown-item" id="as">
-            Apartment for sale
+          {props.isEnglish ? "Apartment for sale" : "Apartament de vânzare"}
           </a>
         </li>
         <li>
           <a className="dropdown-item" id="ar">
-            Apartment for rent
+          {props.isEnglish ? "Apartment for rent" : "Apartament de închiriat"}
           </a>
         </li>
         <li>
           <a className="dropdown-item" id="ss">
-            Studio for sale
+          {props.isEnglish ? "Studio for sale" : "Garsonieră de vânzare"}
           </a>
         </li>
         <li>
           <a className="dropdown-item" id="sr">
-            Studio for rent
+          {props.isEnglish ? "Studio for rent" : "Garsonieră de închiriat"}
           </a>
         </li>
       </ul>

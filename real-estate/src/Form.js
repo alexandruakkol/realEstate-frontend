@@ -13,9 +13,9 @@ const Form = ({ transmitToApp, neighbourhood }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
+console.log(Object.keys(neighbourhood))
   //conditional return
-  if (Object.keys(neighbourhood).length !== 0) {
+  if (Object.keys(neighbourhood)!== "Choose neighbourhood" || Object.keys(neighbourhood)!== "Alege cartierul") {
     return (
       <form className="mainForm" onSubmit={handleSubmit}>
         {/* Text area */}

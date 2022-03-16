@@ -12,8 +12,13 @@ const NeighbourhoodDropdown = (props) => {
   }, [props.data]);
 
   React.useEffect(() => {
-    if (neighbourhood[0] !== "C") {
-      props.transmitNeighbourhood({ neighbourhood: neighbourhood[0] });
+   setNeighbourhood(props.isEnglish ? "Choose neighbourhood":"Alege cartierul")
+  }, [props.isEnglish]);
+
+  React.useEffect(() => {
+
+    if (neighbourhood !== "Choose neighbourhood" || neighbourhood !== "Alege cartierul") {
+      props.transmitNeighbourhood({ neighbourhood: neighbourhood });
     }
   }, [neighbourhood]);
 

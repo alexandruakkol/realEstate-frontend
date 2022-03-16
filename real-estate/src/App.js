@@ -69,17 +69,11 @@ const App = () => {
     //Language event listeners
     document.querySelector(".english").addEventListener("click", () => {
       setIsEnglish(true);
-      setMode("Choose property type");
-      window.lang = 'en';
-
-      
+      window.lang = "en";
     });
     document.querySelector(".romanian").addEventListener("click", () => {
       setIsEnglish(false);
-      setMode("Alege tipul proprietății");
-      window.lang = 'ro';
-
-      
+      window.lang = "ro";
     });
   }, []);
 
@@ -127,9 +121,9 @@ const App = () => {
       <section className="section1">
         <div id="h1Cont">
           <h1>
-            {isEnglish ? "REAL ESTATE":"PREȚURI"}
+            {isEnglish ? "REAL ESTATE" : "PREȚURI"}
             <br />
-            {isEnglish ? "PRICES IN BUCHAREST":"IMOBILIARE ÎN BUCUREȘTI"}
+            {isEnglish ? "PRICES IN BUCHAREST" : "IMOBILIARE ÎN BUCUREȘTI"}
           </h1>
         </div>
         <div class="buttonCont">
@@ -137,7 +131,7 @@ const App = () => {
             type="button"
             class="d-grid gap-2 col-6 btn btn-success mainButton"
           >
-             {isEnglish ? "Get started":"Începe"}
+            {isEnglish ? "Get started" : "Începe"}
           </button>
         </div>
         <div class="buttonCont">
@@ -146,14 +140,19 @@ const App = () => {
             id="dataButton"
             class="mx-auto btn btn-success mainButton"
           >
-            {isEnglish ? "Data source & calculation":"Surse și modul de calcul"}
+            {isEnglish
+              ? "Data source & calculation"
+              : "Surse și modul de calcul"}
           </button>
         </div>
       </section>
       <section className="section2">
-        <TypeDropdown name={mode}></TypeDropdown>
+        <TypeDropdown 
+        name={mode} 
+        isEnglish={isEnglish}></TypeDropdown>
 
         <NeighbourhoodDropdown
+          isEnglish={isEnglish}
           data={cur_data}
           transmitNeighbourhood={transmitNeighbourhood}
         ></NeighbourhoodDropdown>

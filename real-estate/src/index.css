@@ -8,6 +8,7 @@
   font-family: "Ubuntu", "Arial";
   
 }
+.wrapper,
 body{
   overflow:hidden;
 }
@@ -20,6 +21,7 @@ body{
   border-color: #ff3860;
 }
 header {
+  position:fixed;
   text-align: right;
   height: 5.5vh;
   background-color: var(--colorHeader);
