@@ -6,6 +6,7 @@ import compute from "./compute.js";
 
 const App = () => {
   const [submitted, setSubmitted] = React.useState({});
+  const [isEnglish, setIsEnglish] = React.useState(true);
   const [cur_data, setCur_data] = React.useState();
   const [neighbourhood, setNeighbourhood] = React.useState({});
   const [apSale, setApSale] = React.useState({});
@@ -67,12 +68,18 @@ const App = () => {
     });
     //Language event listeners
     document.querySelector(".english").addEventListener("click", () => {
-      window.en = true;
-      console.log("switched to ", window.en ? "English" : "Romanian");
+      setIsEnglish(true);
+      setMode("Choose property type");
+      window.lang = 'en';
+
+      
     });
     document.querySelector(".romanian").addEventListener("click", () => {
-      window.en = false;
-      console.log("switched to ", window.en ? "English" : "Romanian");
+      setIsEnglish(false);
+      setMode("Alege tipul proprietății");
+      window.lang = 'ro';
+
+      
     });
   }, []);
 
@@ -120,9 +127,9 @@ const App = () => {
       <section className="section1">
         <div id="h1Cont">
           <h1>
-            ESTIMATE REAL ESTATE
+            {isEnglish ? "REAL ESTATE":"PREȚURI"}
             <br />
-            PRICES IN BUCHAREST
+            {isEnglish ? "PRICES IN BUCHAREST":"IMOBILIARE ÎN BUCUREȘTI"}
           </h1>
         </div>
         <div class="buttonCont">
@@ -130,7 +137,7 @@ const App = () => {
             type="button"
             class="d-grid gap-2 col-6 btn btn-success mainButton"
           >
-            Get started
+             {isEnglish ? "Get started":"Începe"}
           </button>
         </div>
         <div class="buttonCont">
@@ -139,7 +146,7 @@ const App = () => {
             id="dataButton"
             class="mx-auto btn btn-success mainButton"
           >
-            Data source & calculation
+            {isEnglish ? "Data source & calculation":"Surse și modul de calcul"}
           </button>
         </div>
       </section>

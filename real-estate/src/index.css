@@ -64,7 +64,7 @@ header {
 #gridContainer1 {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 0.8fr 0.482fr;
+  grid-auto-columns: 0.7fr 0.3fr;
   height: 100vh;
 }
 #rightDiv {
@@ -83,13 +83,17 @@ header {
   background-image: url("https://images.unsplash.com/photo-1571079977652-fdd830b2eb63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGJ1Y2hhcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
 }
 
+#h1Cont{
+  width:100%;
+}
 h1 {
   font-size: 3.8rem;
   margin: 0;
   text-align: center;
   padding-top: 33vh;
   padding-bottom: 2vh;
-  font-family: "Passion One", cursive;
+  font-family: "Arimo";
+  font-weight:bold;
   color: rgb(36, 36, 36);
   text-align: left;
   margin-left: 5rem;
