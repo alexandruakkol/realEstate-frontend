@@ -27,7 +27,9 @@ header {
   line-height: 7vh;
   width: 107vw;
 }
-.github{margin-right:9vw;}
+.github{
+  display:inline-block;
+  margin-right:9vw;}
 .imageDiv {
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,6 +39,26 @@ header {
   max-width: 100%;
   height: auto;
 }
+
+.languageSwitcher{
+  display:inline-block;
+  line-height: 7vh;
+  margin-right:10px;
+}
+
+.language-btn{
+  color:var(--color2);
+  border:0px;
+  margin-bottom:15px;
+  font-family: tahoma;
+
+}
+.language-btn:hover{
+  background-color:var(--color1);
+  color:black;
+}
+
+
 /*First section*/
 
 #gridContainer1 {

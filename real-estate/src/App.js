@@ -6,7 +6,6 @@ import compute from "./compute.js";
 
 const App = () => {
   const [submitted, setSubmitted] = React.useState({});
-
   const [cur_data, setCur_data] = React.useState();
   const [neighbourhood, setNeighbourhood] = React.useState({});
   const [apSale, setApSale] = React.useState({});
@@ -24,6 +23,7 @@ const App = () => {
 
   //run on start only
   React.useEffect(() => {
+    window.en = false;
     fetch(url1)
       .then((response1) => response1.json())
       .then((data1) => {
@@ -63,8 +63,17 @@ const App = () => {
       document.querySelector(".appStart").scrollIntoView();
     });
     document.querySelector("#dataButton").addEventListener("click", () => {
-        document.querySelector(".sources").scrollIntoView();
-      });
+      document.querySelector(".sources").scrollIntoView();
+    });
+    //Language event listeners
+    document.querySelector(".english").addEventListener("click", () => {
+      window.en = true;
+      console.log("switched to ", window.en ? "English" : "Romanian");
+    });
+    document.querySelector(".romanian").addEventListener("click", () => {
+      window.en = false;
+      console.log("switched to ", window.en ? "English" : "Romanian");
+    });
   }, []);
 
   React.useEffect(() => {
@@ -102,23 +111,66 @@ const App = () => {
   };
   React.useEffect(() => {
     setResults(compute(submitted));
-
   }, [submitted]);
 
   // add eventlisteners for dropdowns
 
   return (
     <React.Fragment>
-      <TypeDropdown name={mode}></TypeDropdown>
+      <section className="section1">
+        <div id="h1Cont">
+          <h1>
+            ESTIMATE REAL ESTATE
+            <br />
+            PRICES IN BUCHAREST
+          </h1>
+        </div>
+        <div class="buttonCont">
+          <button
+            type="button"
+            class="d-grid gap-2 col-6 btn btn-success mainButton"
+          >
+            Get started
+          </button>
+        </div>
+        <div class="buttonCont">
+          <button
+            type="button"
+            id="dataButton"
+            class="mx-auto btn btn-success mainButton"
+          >
+            Data source & calculation
+          </button>
+        </div>
+      </section>
+      <section className="section2">
+        <TypeDropdown name={mode}></TypeDropdown>
 
-      <NeighbourhoodDropdown
-        data={cur_data}
-        transmitNeighbourhood={transmitNeighbourhood}
-      ></NeighbourhoodDropdown>
-      <Form transmitToApp={transmitToApp} neighbourhood={neighbourhood}></Form>
-      <React.Fragment>
-        {results ? <div className="result">Estimate: €{results}</div> : ""}
-      </React.Fragment>
+        <NeighbourhoodDropdown
+          data={cur_data}
+          transmitNeighbourhood={transmitNeighbourhood}
+        ></NeighbourhoodDropdown>
+        <Form
+          transmitToApp={transmitToApp}
+          neighbourhood={neighbourhood}
+        ></Form>
+        <React.Fragment>
+          {results ? <div className="result">Estimate: €{results}</div> : ""}
+        </React.Fragment>
+      </section>
+
+      <section className="section3">
+        <p className="sources">
+          Base data source:{" "}
+          <a href="https://compariimobiliare.ro/pret-imobil">
+            compariimobiliare.ro
+          </a>
+        </p>
+        <p className="sources">
+          The valuation does have its inaccuracies. It is a proof-of-concept and
+          should be treated as such.
+        </p>
+      </section>
     </React.Fragment>
   );
 };

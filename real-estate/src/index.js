@@ -4,6 +4,6 @@ import App from './App';
 
 ReactDOM.render(
   <App></App>,
-  document.querySelector('.section2')
+  document.querySelector('.leftDiv')
 );
 
