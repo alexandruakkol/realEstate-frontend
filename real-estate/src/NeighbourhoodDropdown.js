@@ -6,7 +6,7 @@ const NeighbourhoodDropdown = (props) => {
   );
 
   React.useEffect(() => {
-    setNeighbourhood("Choose neighbourhood");
+    setNeighbourhood(props.isEnglish ? "Choose neighbourhood":"Alege cartierul");
     if(document.querySelector('.mainForm')){document.querySelector('.mainForm').reset();}
     
   }, [props.data]);

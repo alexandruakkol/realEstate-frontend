@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ transmitToApp, neighbourhood }) => {
+const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
   const [metro, setMetro] = React.useState("");
   const [area, setArea] = React.useState("");
   const [central, setCentral] = React.useState(false);
@@ -13,15 +13,15 @@ const Form = ({ transmitToApp, neighbourhood }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-console.log(Object.keys(neighbourhood))
+console.log(Object.values(neighbourhood)[0])
   //conditional return
-  if (Object.keys(neighbourhood)!== "Choose neighbourhood" || Object.keys(neighbourhood)!== "Alege cartierul") {
+  if (Object.values(neighbourhood)[0]!== "Choose neighbourhood" && Object.values(neighbourhood)[0]!== "Alege cartierul") {
     return (
       <form className="mainForm" onSubmit={handleSubmit}>
         {/* Text area */}
         <div className="areaForm">
           <label className="areaLabel required-field title" htmlFor="area">
-            Area (m²)
+          {isEnglish ? "Useful area (m²):" : "m² utili:"}
           </label>
           <input
             pattern="[0-9]+$"
@@ -39,7 +39,7 @@ console.log(Object.keys(neighbourhood))
 
         <div className="metroDiv">
           <label className="metroLabel title" htmlFor="metroDistance">
-            Distance to metro (meters)
+          {isEnglish ? "Distance to metro (meters):" : "Distanta până la metrou (metri):"}
           </label>
           <input
             pattern="[0-9]+$"
@@ -67,7 +67,7 @@ console.log(Object.keys(neighbourhood))
               }}
               
             ></input>
-            <label htmlFor="heating">Central heating</label>
+            <label htmlFor="heating">{isEnglish ? "Central heating" : "Centrală termică"}</label>
           </div>
           <div>
             
@@ -79,7 +79,7 @@ console.log(Object.keys(neighbourhood))
                 setMixed(!mixed);
               }}
             ></input>
-            <label htmlFor="mixed">Mixed building</label>
+            <label htmlFor="mixed">{isEnglish ? "Mixed building" : "Bloc mixt"}</label>
           </div>
           <div>
             
@@ -91,13 +91,13 @@ console.log(Object.keys(neighbourhood))
                 setRehab(!rehab);
               }}
             ></input>
-            <label htmlFor="rehab">Thermal rehabilitation</label>
+            <label htmlFor="rehab">{isEnglish ? "Thermal rehabilitation" : "Bloc reabilitat"}</label>
           </div>
         </div>
         <section className="radios">
           {/* Year built radios */}
           <div className="yearRadios">
-            <p className='title'>Building year:</p>
+            <p className='title'>{isEnglish ? "Building year:" : "An construcție:"}</p>
             <div>
               <input
               className='form-check-input'
@@ -154,7 +154,7 @@ console.log(Object.keys(neighbourhood))
           {/* Floor radios*/}
 
           <div className="floorRadios">
-            <p className='title'>Floor:</p>
+            <p className='title'>{isEnglish ? "Floor:" : "Etaj:"}</p>
             <div>
               <input
               className='form-check-input'
@@ -165,7 +165,7 @@ console.log(Object.keys(neighbourhood))
                   setFloor(e.target.id);
                 }}
               ></input>
-              <label htmlFor="midFloor">Mid Floor</label>
+              <label htmlFor="midFloor">{isEnglish ? "Mid floor:" : "Etaj intermediar"}</label>
             </div>
 
             <div>
@@ -178,7 +178,7 @@ console.log(Object.keys(neighbourhood))
                   setFloor(e.target.id);
                 }}
               ></input>
-              <label htmlFor="groundFloor">Ground Floor</label>
+              <label htmlFor="groundFloor">{isEnglish ? "Ground floor:" : "Parter"}</label>
             </div>
 
             <div>
@@ -191,13 +191,13 @@ console.log(Object.keys(neighbourhood))
                   setFloor(e.target.id);
                 }}
               ></input>
-              <label htmlFor="lastFloor">Last floor</label>
+              <label htmlFor="lastFloor">{isEnglish ? "Last floor:" : "Ultimul etaj"}</label>
             </div>
           </div>
 
           {/* Condition radios*/}
           <div className="conditionRadios">
-            <p className='title'>Condition</p>
+            <p className='title'>{isEnglish ? "Condition:" : "Condiție:"}</p>
             <div>
               <input
               className='form-check-input'
@@ -208,7 +208,7 @@ console.log(Object.keys(neighbourhood))
                   setCondition(e.target.id);
                 }}
               ></input>
-              <label htmlFor="shell">Shell stage</label>
+              <label htmlFor="shell">{isEnglish ? "Shell stage:" : "Necesită renovări majore"}</label>
             </div>
 
             <div>
@@ -221,7 +221,7 @@ console.log(Object.keys(neighbourhood))
                   setCondition(e.target.id);
                 }}
               ></input>
-              <label htmlFor="finish">Finish stage</label>
+              <label htmlFor="finish">{isEnglish ? "Finish stage:" : "Finisat, nemobilat"}</label>
             </div>
 
             <div>
@@ -234,7 +234,7 @@ console.log(Object.keys(neighbourhood))
                   setCondition(e.target.id);
                 }}
               ></input>
-              <label htmlFor="turnkey">Turnkey</label>
+              <label htmlFor="turnkey">{isEnglish ? "Turnkey:" : "La gata"}</label>
             </div>
           </div>
         </section>
