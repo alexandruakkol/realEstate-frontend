@@ -1,16 +1,18 @@
 :root {
-  --colorHeader: #064635;
-  --color1: #f4eea9;
-  --color2: #f0bb62;
-  --color3: #519259;
+  --colorHeader: #383e56;
+  --color1: #f0dfce;
+  --color2: #aea37c;
+  --color3: #f4c7ab;
+
+  --color4: #ebe8e5a3;
+  --color5: #1b2139;
 }
 * {
   font-family: "Ubuntu", "Arial";
-  
 }
 .wrapper,
-body{
-  overflow:hidden;
+body {
+  overflow: hidden;
 }
 .required-field::after {
   content: "*";
@@ -21,7 +23,7 @@ body{
   border-color: #ff3860;
 }
 header {
-  position:fixed;
+  position: fixed;
   text-align: right;
   height: 5.5vh;
   background-color: var(--colorHeader);
@@ -29,9 +31,10 @@ header {
   line-height: 7vh;
   width: 107vw;
 }
-.github{
-  display:inline-block;
-  margin-right:9vw;}
+.github {
+  display: inline-block;
+  margin-right: 9vw;
+}
 .imageDiv {
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,24 +45,22 @@ header {
   height: auto;
 }
 
-.languageSwitcher{
-  display:inline-block;
+.languageSwitcher {
+  display: inline-block;
   line-height: 7vh;
-  margin-right:10px;
+  margin-right: 10px;
 }
 
-.language-btn{
-  color:var(--color2);
-  border:0px;
-  margin-bottom:15px;
-  font-family: tahoma;
-
+.language-btn {
+  color: var(--color1);
+  border: 0px;
+  margin-bottom: 15px;
+  font-family: "Times New Roman", Times, serif;
 }
-.language-btn:hover{
-  background-color:var(--color1);
-  color:black;
+.language-btn:hover {
+  background-color: var(--color1);
+  color: black;
 }
-
 
 /*First section*/
 
@@ -85,8 +86,8 @@ header {
   background-image: url("https://images.unsplash.com/photo-1571079977652-fdd830b2eb63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGJ1Y2hhcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
 }
 
-#h1Cont{
-  width:100%;
+#h1Cont {
+  width: 100%;
 }
 h1 {
   font-size: 3.8rem;
@@ -95,19 +96,24 @@ h1 {
   padding-top: 33vh;
   padding-bottom: 2vh;
   font-family: "Arimo";
-  font-weight:bold;
+  font-weight: bold;
   color: rgb(36, 36, 36);
   text-align: left;
   margin-left: 5rem;
 }
 
 .dropdown-toggle {
-  background-color: var(--color1);
-  border-color: var(--color4);
+  background-color: #f0dfce00;
+  border-color: var(--colorHeader);
   color: black;
   display: inline-block;
-  border-radius: 0px;
+  width: 19rem;
+  border-radius: 5px;
+  border: 1px solid;
+  font-size: 1.3rem;
+  margin-left: 5rem;
 }
+
 #getStarted {
   display: inline-block;
   height: 38px;
@@ -133,22 +139,23 @@ h1 {
   padding-top: 10px;
 }
 
-.dropdown-toggle {
-  width: 19rem;
-  border-radius: 5px;
-  font-size: 1.3rem;
-  margin-left: 5rem;
-}
-
 /* FORM AREA */
 input[type="text"] {
-  background-color: var(--color2);
-  border-radius: 7px;
+  background-color: var(--color4);
+  border-radius: 10px;
   width: 80%;
   max-width: 300px;
 }
 .checks {
   margin-top: 17px;
+}
+/* Checkbox color when checked */
+.form-check-input {
+  background-color: var(--color4);
+  border: 0.85px solid var(--colorHeader);
+}
+.form-check-input:checked {
+  background-color: var(--colorHeader);
 }
 Form {
   margin-right: 20vw;
@@ -158,9 +165,9 @@ Form {
   padding-top: 15px;
   padding-left: 60px;
   text-align: left;
-  border: 7px solid var(--color2);
-  border-radius: 0.5rem;
-  font-family: "Lato", sans-serif;
+  border: 3px solid var(--colorHeader);
+  border-radius: 2rem;
+  font-family: "Ubuntu", sans-serif;
 }
 form {
   height: 800px;
@@ -172,6 +179,7 @@ form {
   margin-top: 12px;
 }
 label {
+  margin-left:1.5px;
   font-size: 18px;
 }
 
@@ -180,7 +188,6 @@ label {
 .submit-btn {
   margin-top: 25px;
   padding: 5px 40px 5px 40px;
-  font-family: "Ubuntu";
 }
 #dataButton {
   margin-top: 20px;
@@ -207,15 +214,16 @@ a {
 
 .result {
   text-align: center;
-  border: 7px solid var(--color2);
-  font-weight:bolder;
+  font-weight: bolder;
   margin-top: 1.5rem;
   font-size: 2rem;
   padding: 1.5rem;
   margin-right: 20vw;
   margin-left: 75px;
-  max-width: 700px;
+  min-width: 400px;
   color: rgb(45, 45, 45);
+  border: 3px solid var(--colorHeader);
+  border-radius: 2rem;
 }
 
 .photosGrid {
@@ -257,9 +265,9 @@ a {
 }
 .section1,
 .section3 {
-  height: 94vh;
+  height: 100vh;
 }
-.section2{
+.section2 {
   min-height: 90vh;
 }
 .appDiv {
@@ -270,4 +278,9 @@ a {
 }
 .sources {
   margin-top: 8vh;
+}
+.mainButton:hover,
+.mainButton:checked,
+.mainButton:focus{
+  background-color: var(--color5);
 }

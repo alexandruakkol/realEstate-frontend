@@ -38,7 +38,7 @@ const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
 
         <div className="metroDiv">
           <label className="metroLabel title" htmlFor="metroDistance">
-          {isEnglish ? "Distance to metro (meters):" : "Distanta până la metrou (metri):"}
+          {isEnglish ? "Distance to metro (meters):" : "Distanța până la metrou (metri):"}
           </label>
           <input
             pattern="[0-9]+$"

@@ -1,3 +1,6 @@
+//TODO: results pane to reset form
+//TODO: refactor DRY React.whatevers
+
 import React from "react";
 import TypeDropdown from "./TypeDropdown";
 import NeighbourhoodDropdown from "./NeighbourhoodDropdown";
@@ -24,7 +27,7 @@ const App = () => {
 
   //run on start only
   React.useEffect(() => {
-    window.en = false;
+    //API calls
     fetch(url1)
       .then((response1) => response1.json())
       .then((data1) => {
@@ -59,13 +62,15 @@ const App = () => {
     document.querySelector("#sr").addEventListener("click", () => {
       setMode("Studio for rent");
     });
-    //Get Started button
+
+    //Scroll-into-view listeners
     document.querySelector(".mainButton").addEventListener("click", () => {
       document.querySelector(".appStart").scrollIntoView();
     });
     document.querySelector("#dataButton").addEventListener("click", () => {
       document.querySelector(".sources").scrollIntoView();
     });
+
     //Language event listeners
     document.querySelector(".english").addEventListener("click", () => {
       setIsEnglish(true);
@@ -76,7 +81,7 @@ const App = () => {
       window.lang = "ro";
     });
   }, []);
-
+  
   React.useEffect(() => {
     if (mode === "Apartment for sale") {
       setCur_data(apSale);
@@ -94,17 +99,15 @@ const App = () => {
 
   const transmitNeighbourhood = (nb) => {
     setNeighbourhood(nb);
-    
-
+  
   };
-  //liaison btwn Form.js and App.js
+  //liaison function btwn Form.js and App.js
   const transmitToApp = (data_from_form) => {
     if (!data_from_form.area) {
       document.querySelector("#area").classList.add("error");
     }
 
 //process raw data from Form.js
-    let arrayOfObjects = Object.values(cur_data["data"]);
     let neighbourhoodPrice = Object.values(
       cur_data.data.find(
         (x) => Object.keys(x)[0] === neighbourhood.neighbourhood[0]
@@ -120,8 +123,6 @@ const App = () => {
   React.useEffect(() => {
     setResults(compute(submitted));
   }, [submitted]);
-
-  // add eventlisteners for dropdowns
 
   return (
     <React.Fragment>
@@ -169,7 +170,7 @@ const App = () => {
           isEnglish={isEnglish}
         ></Form>
         <React.Fragment>
-          {results ? <div className="result">Estimate: €{results}</div> : ""}
+          {results ? <div className="result">{isEnglish ? "Estimate: ": "Estimat: "}€{results}</div> : ""}
         </React.Fragment>
       </section>
 
