@@ -94,16 +94,23 @@ const App = () => {
 
   const transmitNeighbourhood = (nb) => {
     setNeighbourhood(nb);
+    
+
   };
+  //liaison btwn Form.js and App.js
   const transmitToApp = (data_from_form) => {
     if (!data_from_form.area) {
       document.querySelector("#area").classList.add("error");
     }
+
+//process raw data from Form.js
+    let arrayOfObjects = Object.values(cur_data["data"]);
     let neighbourhoodPrice = Object.values(
       cur_data.data.find(
-        (x) => Object.keys(x)[0] === neighbourhood.neighbourhood
+        (x) => Object.keys(x)[0] === neighbourhood.neighbourhood[0]
       )
     )[0];
+
     setSubmitted({
       ...data_from_form,
       neighPrice: neighbourhoodPrice.price,

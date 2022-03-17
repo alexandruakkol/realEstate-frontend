@@ -6,14 +6,13 @@ const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
   const [central, setCentral] = React.useState(false);
   const [mixed, setMixed] = React.useState(false);
   const [rehab, setRehab] = React.useState(false);
-  const [year, setYear] = React.useState("");
+  const [year, setYear] = React.useState("1950-1977");
   const [floor, setFloor] = React.useState("midFloor");
   const [condition, setCondition] = React.useState("finish");
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-console.log(Object.values(neighbourhood)[0])
   //conditional return
   if (Object.values(neighbourhood)[0]!== "Choose neighbourhood" && Object.values(neighbourhood)[0]!== "Alege cartierul") {
     return (
@@ -254,7 +253,7 @@ console.log(Object.values(neighbourhood)[0])
             });
           }}
         >
-          Submit
+          {isEnglish ? "Submit" : "Evaluează"}
         </button>
       </form>
     );
