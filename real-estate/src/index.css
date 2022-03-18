@@ -32,6 +32,8 @@ header {
   width: 107vw;
 }
 .github {
+  font-size: 2.5vh;
+  line-height:7vh;
   display: inline-block;
   margin-right: 9vw;
 }
@@ -172,12 +174,15 @@ Form {
 form {
   height: 800px;
 }
+
 .title {
   display: block;
   font-size: 1.2rem;
   font-weight: bolder;
   margin-top: 12px;
+  margin-bottom: 7px;
 }
+
 label {
   margin-left:1.5px;
   font-size: 18px;
