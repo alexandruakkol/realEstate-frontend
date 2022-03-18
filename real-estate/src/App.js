@@ -1,6 +1,4 @@
-//TODO: results pane to reset form
-
-import React, {useState} from "react";
+import React, { useState } from "react";
 import TypeDropdown from "./TypeDropdown";
 import NeighbourhoodDropdown from "./NeighbourhoodDropdown";
 import Form from "./Form";
@@ -80,7 +78,7 @@ const App = () => {
       window.lang = "ro";
     });
   }, []);
-  
+
   React.useEffect(() => {
     if (mode === "Apartment for sale") {
       setCur_data(apSale);
@@ -95,10 +93,9 @@ const App = () => {
       setCur_data(stdRent);
     }
   }, [mode]);
-
+  
   const transmitNeighbourhood = (nb) => {
     setNeighbourhood(nb);
-  
   };
   //liaison function btwn Form.js and App.js
   const transmitToApp = (data_from_form) => {
@@ -106,7 +103,7 @@ const App = () => {
       document.querySelector("#area").classList.add("error");
     }
 
-//process raw data from Form.js
+    //process raw data from Form.js
     let neighbourhoodPrice = Object.values(
       cur_data.data.find(
         (x) => Object.keys(x)[0] === neighbourhood.neighbourhood[0]
@@ -122,6 +119,12 @@ const App = () => {
   React.useEffect(() => {
     setResults(compute(submitted));
   }, [submitted]);
+
+  // hook for tracking neighbourhood changes
+  React.useEffect(() => {
+    setResults(undefined);
+  }, [neighbourhood])
+
 
   return (
     <React.Fragment>
@@ -154,9 +157,7 @@ const App = () => {
         </div>
       </section>
       <section className="section2">
-        <TypeDropdown 
-        name={mode} 
-        isEnglish={isEnglish}></TypeDropdown>
+        <TypeDropdown name={mode} isEnglish={isEnglish}></TypeDropdown>
 
         <NeighbourhoodDropdown
           isEnglish={isEnglish}
@@ -169,20 +170,27 @@ const App = () => {
           isEnglish={isEnglish}
         ></Form>
         <React.Fragment>
-          {results ? <div className="result">{isEnglish ? "Estimate: ": "Estimat: "}€{results}</div> : ""}
+          {results ? (
+            <div className="result">
+              {isEnglish ? "Estimate: " : "Estimat: "}€{results}
+            </div>
+          ) : (
+            ""
+          )}
         </React.Fragment>
       </section>
 
       <section className="section3">
         <p className="sources">
-        {isEnglish ? "Base data source: ": "Sursă date de bază: "}
+          {isEnglish ? "Base data source: " : "Sursă date de bază: "}
           <a href="https://compariimobiliare.ro/pret-imobil">
             compariimobiliare.ro
           </a>
         </p>
         <p className="sources">
-        {isEnglish ? "The valuation does have its inaccuracies. It is a proof-of-concept and should be treated as such." : "Evaluarea este un proces foarte complex. Valoarea dată este aproximativă și trebuie tratată ca atare."}
-          
+          {isEnglish
+            ? "The valuation does have its inaccuracies. It is a proof-of-concept and should be treated as such."
+            : "Evaluarea este un proces foarte complex. Valoarea dată este aproximativă și trebuie tratată ca atare."}
         </p>
       </section>
     </React.Fragment>
