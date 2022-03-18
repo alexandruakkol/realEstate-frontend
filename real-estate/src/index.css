@@ -31,11 +31,15 @@ header {
   line-height: 7vh;
   width: 107vw;
 }
+
 .github {
-  font-size: 2.5vh;
+  font-size: 2.3vh;
   line-height:7vh;
   display: inline-block;
   margin-right: 9vw;
+}
+.github:hover{
+  color:var(--color1);
 }
 .imageDiv {
   background-repeat: no-repeat;
@@ -43,8 +47,8 @@ header {
   background-color: var(--color2); /* Tint color */
   background-blend-mode: multiply;
   border: 0.1rem solid var(--color2);
-  max-width: 100%;
   height: auto;
+  min-width:30vw;
 }
 
 .languageSwitcher {
