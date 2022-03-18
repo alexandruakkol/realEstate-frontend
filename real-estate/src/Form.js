@@ -1,14 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
-  const [metro, setMetro] = React.useState("");
-  const [area, setArea] = React.useState("");
-  const [central, setCentral] = React.useState(false);
-  const [mixed, setMixed] = React.useState(false);
-  const [rehab, setRehab] = React.useState(false);
-  const [year, setYear] = React.useState("1950-1977");
-  const [floor, setFloor] = React.useState("midFloor");
-  const [condition, setCondition] = React.useState("finish");
+  const [metro, setMetro] = useState("");
+  const [area, setArea] = useState("");
+  const [central, setCentral] = useState(false);
+  const [mixed, setMixed] = useState(false);
+  const [rehab, setRehab] = useState(false);
+  const [year, setYear] = useState("1950-1977");
+  const [floor, setFloor] = useState("midFloor");
+  const [condition, setCondition] = useState("finish");
 
   const handleSubmit = (e) => {
     e.preventDefault();

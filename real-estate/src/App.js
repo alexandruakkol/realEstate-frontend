@@ -1,23 +1,22 @@
 //TODO: results pane to reset form
-//TODO: refactor DRY React.whatevers
 
-import React from "react";
+import React, {useState} from "react";
 import TypeDropdown from "./TypeDropdown";
 import NeighbourhoodDropdown from "./NeighbourhoodDropdown";
 import Form from "./Form";
 import compute from "./compute.js";
 
 const App = () => {
-  const [submitted, setSubmitted] = React.useState({});
-  const [isEnglish, setIsEnglish] = React.useState(true);
-  const [cur_data, setCur_data] = React.useState();
-  const [neighbourhood, setNeighbourhood] = React.useState({});
-  const [apSale, setApSale] = React.useState({});
-  const [apRent, setApRent] = React.useState({});
-  const [stdSale, setStdSale] = React.useState({});
-  const [stdRent, setStdRent] = React.useState({});
-  const [mode, setMode] = React.useState("Choose property type");
-  const [results, setResults] = React.useState("");
+  const [submitted, setSubmitted] = useState({});
+  const [isEnglish, setIsEnglish] = useState(true);
+  const [cur_data, setCur_data] = useState();
+  const [neighbourhood, setNeighbourhood] = useState({});
+  const [apSale, setApSale] = useState({});
+  const [apRent, setApRent] = useState({});
+  const [stdSale, setStdSale] = useState({});
+  const [stdRent, setStdRent] = useState({});
+  const [mode, setMode] = useState("Choose property type");
+  const [results, setResults] = useState("");
   const url1 =
     "https://real-estate-backend-21.herokuapp.com/apartments-for-rent";
   const url2 =
