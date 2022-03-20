@@ -73,8 +73,8 @@ header {
 #gridContainer1 {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 0.7fr 0.3fr;
-  height: 100vh;
+  grid-auto-columns: 0.75fr 0.25fr;
+  height: 130vh;
 }
 #rightDiv {
   background-image: url("https://images.unsplash.com/photo-1604565629118-07dbd99233c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
@@ -286,7 +286,9 @@ a {
   scroll-behavior: smooth;
 }
 .sources {
+  display:block;
   margin-top: 8vh;
+  margin: right 2px;;
 }
 .mainButton:hover,
 .mainButton:checked,
