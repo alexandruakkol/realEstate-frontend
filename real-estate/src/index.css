@@ -7,6 +7,7 @@
   --color4: #ebe8e5a3;
   --color5: #1b2139;
 }
+
 * {
   font-family: "Ubuntu", "Arial";
 }
@@ -23,23 +24,49 @@ body {
   border-color: #ff3860;
 }
 header {
+  display:grid;
+  grid-template-columns:50fr 50fr;
   position: fixed;
-  text-align: right;
-  height: 5.5vh;
+  height: 70px;
   background-color: var(--colorHeader);
   font-size: 25px;
   line-height: 7vh;
-  width: 107vw;
+  width:100vw;
+}
+
+.leftHeader{
+
+}
+.rightHeader{
+text-align: right;
+}
+.leftHeader,
+.rightHeader{
+}
+.logoDiv {
+  display: inline-block;
+  line-height: 7vh;
+}
+.logo {
+  display:inline-block;
+  width: 60px;
+  height: 60px;
+}
+.logoText{
+  display:inline-block;
+  font-family: 'Encode Sans SC', sans-serif;
+  color:var(--color1);
+
 }
 
 .github {
-  font-size: 2.3vh;
-  line-height:7vh;
+  font-size: 2.5vh;
   display: inline-block;
-  margin-right: 9vw;
+  margin-right:20px;
+  margin-top: 10px;
 }
-.github:hover{
-  color:var(--color1);
+.github:hover {
+  color: var(--color1);
 }
 .imageDiv {
   background-repeat: no-repeat;
@@ -48,12 +75,11 @@ header {
   background-blend-mode: multiply;
   border: 0.1rem solid var(--color2);
   height: auto;
-  min-width:30vw;
+  min-width: 30vw;
 }
 
 .languageSwitcher {
   display: inline-block;
-  line-height: 7vh;
   margin-right: 10px;
 }
 
@@ -188,7 +214,7 @@ form {
 }
 
 label {
-  margin-left:1.5px;
+  margin-left: 1.5px;
   font-size: 18px;
 }
 
@@ -286,12 +312,12 @@ a {
   scroll-behavior: smooth;
 }
 .sources {
-  display:block;
+  display: block;
   margin-top: 8vh;
-  margin: right 2px;;
+  margin: right 2px;
 }
 .mainButton:hover,
 .mainButton:checked,
-.mainButton:focus{
+.mainButton:focus {
   background-color: var(--color5);
 }
