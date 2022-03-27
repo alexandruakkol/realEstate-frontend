@@ -24,46 +24,56 @@ body {
   border-color: #ff3860;
 }
 header {
-  display:grid;
-  grid-template-columns:50fr 50fr;
+  display: grid;
+  grid-template-columns: 50fr 50fr;
   position: fixed;
   height: 70px;
   background-color: var(--colorHeader);
   font-size: 25px;
   line-height: 7vh;
-  width:100vw;
+  width: 100vw;
 }
-
-.leftHeader{
-
+.rightHeader,
+.leftHeader {
+  height: 70px;
 }
-.rightHeader{
-text-align: right;
-}
-.leftHeader,
-.rightHeader{
+.rightHeader {
+  text-align: right;
 }
 .logoDiv {
   display: inline-block;
   line-height: 7vh;
 }
 .logo {
-  display:inline-block;
+  display: inline-block;
   width: 60px;
   height: 60px;
 }
-.logoText{
-  display:inline-block;
-  font-family: 'Encode Sans SC', sans-serif;
-  color:var(--color1);
-
+.logoText {
+  display: inline-block;
+  font-family: "Encode Sans SC", sans-serif;
+  color: var(--color1);
 }
-
+.languageSwitcher {
+  display: inline-block;
+  line-height: 7px;
+  margin-right: 10px;
+  height: 70px;
+}
+.language-btn {
+  color: var(--color1);
+  border: 0px;
+  font-family: "Ubuntu";
+  padding: 7px;
+}
+.language-btn:hover {
+  background-color: var(--color1);
+  color: black;
+}
 .github {
   font-size: 2.5vh;
   display: inline-block;
-  margin-right:20px;
-  margin-top: 10px;
+  margin-right: 20px;
 }
 .github:hover {
   color: var(--color1);
@@ -76,22 +86,6 @@ text-align: right;
   border: 0.1rem solid var(--color2);
   height: auto;
   min-width: 30vw;
-}
-
-.languageSwitcher {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.language-btn {
-  color: var(--color1);
-  border: 0px;
-  margin-bottom: 15px;
-  font-family: "Times New Roman", Times, serif;
-}
-.language-btn:hover {
-  background-color: var(--color1);
-  color: black;
 }
 
 /*First section*/
@@ -155,7 +149,6 @@ h1 {
   vertical-align: middle;
   padding: 0 auto;
 }
-
 .buttonCont {
   text-align: left;
   margin-left: 5rem;
@@ -166,6 +159,10 @@ h1 {
   border-radius: 0.4rem;
   width: 30vw;
   max-width: 200px;
+  border: 2px solid #30430300;
+}
+.btn-success:hover {
+  border: 2px solid var(--colorHeader);
 }
 .typeDropdown {
   padding-top: 10px;
