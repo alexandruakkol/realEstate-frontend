@@ -1,9 +1,10 @@
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import RouteSwitch from "./RouteSwitch"
+
 
 ReactDOM.render(
-  <App></App>,
+  <RouteSwitch></RouteSwitch>,
   document.querySelector('.leftDiv')
 );
 

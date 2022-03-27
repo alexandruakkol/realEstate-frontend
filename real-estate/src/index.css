@@ -6,6 +6,7 @@
 
   --color4: #ebe8e5a3;
   --color5: #1b2139;
+  --iconColor:#151515;
 }
 
 * {
@@ -40,6 +41,16 @@ header {
 .rightHeader {
   text-align: right;
 }
+.loginIcon{
+  color:var(--iconColor);
+  vertical-align: middle;
+  font-size:2.5vh;
+  margin-right:5px;
+  margin-left:2px;
+}
+.loginIcon:hover{
+  color:var(--color1);
+}
 .logoDiv {
   display: inline-block;
   line-height: 7vh;
@@ -71,12 +82,14 @@ header {
   color: black;
 }
 .github {
-  font-size: 2.5vh;
+  font-size: 1.7vh;
   display: inline-block;
   margin-right: 22px;
+  color:var(--iconColor);
 }
 .fa-github{
     vertical-align: middle;
+    margin-bottom: 4px;
 }
 .github:hover {
   color: var(--color1);
