@@ -73,7 +73,10 @@ header {
 .github {
   font-size: 2.5vh;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 22px;
+}
+.fa-github{
+    vertical-align: middle;
 }
 .github:hover {
   color: var(--color1);
