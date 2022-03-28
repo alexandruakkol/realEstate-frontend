@@ -130,7 +130,7 @@ const App = () => {
     <React.Fragment>
       <section className="section1">
         <div id="h1Cont">
-          <h1>
+          <h1 className="mainTitle">
             {isEnglish ? "REAL ESTATE" : "PREȚURI"}
             <br />
             {isEnglish ? "PRICES IN BUCHAREST" : "IMOBILIARE ÎN BUCUREȘTI"}
