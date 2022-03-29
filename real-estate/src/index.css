@@ -3,22 +3,21 @@
   --color1: #f0dfce;
   --color2: #aea37c;
   --color3: #f4c7ab;
-
   --color4: #ebe8e5a3;
   --color5: #1b2139;
-  --iconColor:#151515;
+  --iconColor: #151515;
 }
 
 * {
-  font-family: "Ubuntu", "Arial";
+  font-family: "Ubuntu","Arial";
 }
-body{
+body {
   background-color: var(--color1);
 }
 .wrapper,
 body {
-  margin:0;
-  height:100%;
+  margin: 0;
+  height: 100%;
   overflow: hidden;
 }
 .required-field::after {
@@ -52,22 +51,22 @@ header {
 .rightHeader {
   text-align: right;
 }
-.loginIcon{
-  color:var(--iconColor);
+.loginIcon {
+  color: var(--iconColor);
   vertical-align: middle;
-  font-size:25px;
-  margin-right:5px;
-  margin-left:2px;
+  font-size: 25px;
+  margin-right: 5px;
+  margin-left: 2px;
 }
-.loginIcon:hover{
-  color:var(--color1);
+.loginIcon:hover {
+  color: var(--color1);
 }
 .logoDiv {
   display: inline-block;
-  height:60px;
+  height: 60px;
 }
 .logo {
-  margin-bottom:5px;
+  margin-bottom: 5px;
   display: inline-block;
   width: 60px;
   height: 60px;
@@ -98,11 +97,11 @@ header {
   font-size: 17px;
   display: inline-block;
   margin-right: 22px;
-  color:var(--iconColor);
+  color: var(--iconColor);
 }
-.fa-github{
-    vertical-align: middle;
-    margin-bottom: 4px;
+.fa-github {
+  vertical-align: middle;
+  margin-bottom: 4px;
 }
 .github:hover {
   color: var(--color1);
@@ -120,27 +119,27 @@ header {
 
 #gridContainer1 {
   display: grid;
-  position:fixed;
+  position: fixed;
   grid-auto-flow: column;
   grid-auto-columns: 0.75fr 0.25fr;
   height: 130vh;
 }
 #rightDiv {
-  background-position:0px 110px;
+  background-position: 0px 110px;
   background-image: url("https://images.unsplash.com/photo-1604565629118-07dbd99233c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
 }
 
 /*Second section*/
 
 #rightDiv2 {
-  background-position:-120px -2vh;
+  background-position: -120px -2vh;
   background-image: url("https://images.unsplash.com/photo-1584646098378-0874589d76b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
 }
 
 /*Third section*/
 
 #rightDiv3 {
-  background-position:-130px -150px;
+  background-position: -130px -150px;
   background-image: url("https://images.unsplash.com/photo-1571079977652-fdd830b2eb63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGJ1Y2hhcmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
 }
 
@@ -148,17 +147,17 @@ header {
   width: 100%;
 }
 .mainTitle {
-  font-size: 60px;
+  font-size: 55px;
   margin: 0;
   text-align: center;
   padding-top: 33vh;
   padding-bottom: 2vh;
-  font-family: "Arimo";
+  font-family:"Times New Roman";
   font-weight: bold;
   color: rgb(36, 36, 36);
   text-align: left;
   margin-left: 5rem;
-  width:60vw;
+  width: 60vw;
 }
 
 .dropdown-toggle {
@@ -247,7 +246,25 @@ label {
   margin-left: 1.5px;
   font-size: 18px;
 }
-
+.conditionContainer {
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+  max-width: 450px;
+}
+.toolTip span {
+  display: block;
+  margin-top: 6px;
+  background: var(--colorHeader);
+  color: #fff;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+  font-size: 13px;
+  font-family: "Ubuntu";
+  cursor: help;
+}
 /* END FORM AREA */
 
 .submit-btn {
@@ -331,6 +348,7 @@ a {
 .section1,
 .section3 {
   height: 100vh;
+  width:95%;
 }
 .section2 {
   min-height: 93vh;
@@ -353,21 +371,21 @@ a {
 }
 
 /* Login page */
-.loginSection{
+.loginSection {
   text-align: center;
 }
-.loginForm{
-  display:inline-block;
-  height:450px;
-  width:400px;
+.loginForm {
+  display: inline-block;
+  height: 450px;
+  width: 400px;
   margin-top: 200px;
 }
 
 @media only screen and (max-width: 610px) {
-.leftDiv{
-  width:100vh;
-};
-.mainTitle{
-  font-size:10px;
-}
-};
+  .leftDiv {
+    width: 100vh;
+  }
+  .mainTitle {
+    font-size: 10px;
+  }
+} ;

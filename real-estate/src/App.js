@@ -93,7 +93,7 @@ const App = () => {
       setCur_data(stdRent);
     }
   }, [mode]);
-  
+
   const transmitNeighbourhood = (nb) => {
     setNeighbourhood(nb);
   };
@@ -123,17 +123,28 @@ const App = () => {
   // hook for tracking neighbourhood changes
   React.useEffect(() => {
     setResults(undefined);
-  }, [neighbourhood])
-
+  }, [neighbourhood]);
 
   return (
     <React.Fragment>
       <section className="section1">
         <div id="h1Cont">
-          <h1 className="mainTitle">
-            {isEnglish ? "REAL ESTATE" : "PREȚURI"}
+          <h1
+            className="mainTitle"
+            style={
+              isEnglish
+                ? {
+                    fontFamily: "Prata",
+                  }
+                : {
+                    fontFamily: "Gelasio",
+                    fontSize: "55px",
+                  }
+            }
+          >
+            {isEnglish ? "EVALUATE YOUR" : "PREȚURI"}
             <br />
-            {isEnglish ? "PRICES IN BUCHAREST" : "IMOBILIARE ÎN BUCUREȘTI"}
+            {isEnglish ? "REAL ESTATE IN BUCHAREST" : "IMOBILIARE ÎN BUCUREȘTI"}
           </h1>
         </div>
         <div className="buttonCont">
