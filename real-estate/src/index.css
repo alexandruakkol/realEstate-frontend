@@ -17,6 +17,8 @@ body{
 }
 .wrapper,
 body {
+  margin:0;
+  height:100%;
   overflow: hidden;
 }
 .required-field::after {
@@ -118,6 +120,7 @@ header {
 
 #gridContainer1 {
   display: grid;
+  position:fixed;
   grid-auto-flow: column;
   grid-auto-columns: 0.75fr 0.25fr;
   height: 130vh;
@@ -259,7 +262,7 @@ label {
   width: 32vw;
 }
 .sources {
-  text-align: left;
+  text-align: center;
   margin-top: 20px;
   font-size: 23px;
   margin-left: 10px;

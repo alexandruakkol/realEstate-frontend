@@ -5,16 +5,11 @@ const Login = () => {
       <section className="loginSection">
       <form className="loginForm">
         <div className="form-outline mb-4">
-          <input type="email" id="form2Example1" className="form-control" />
-          <label className="form-label" for="form2Example1">
-            Email address
-          </label>
+          <input placeholder="email" type="email" id="form2Example1" className="form-control" />
+
         </div>
         <div className="form-outline mb-4">
-          <input type="password" id="form2Example2" className="form-control" />
-          <label className="form-label" for="form2Example2">
-            Password
-          </label>
+          <input placeholder="password" type="password" id="form2Example2" className="form-control" />
         </div>
         <div className="row mb-4">
           <div className="col d-flex justify-content-center">

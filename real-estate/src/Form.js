@@ -164,7 +164,7 @@ const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
                   setFloor(e.target.id);
                 }}
               ></input>
-              <label htmlFor="midFloor">{isEnglish ? "Mid floor:" : "Etaj intermediar"}</label>
+              <label htmlFor="midFloor">{isEnglish ? "Mid floor" : "Etaj intermediar"}</label>
             </div>
 
             <div>
@@ -177,7 +177,7 @@ const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
                   setFloor(e.target.id);
                 }}
               ></input>
-              <label htmlFor="groundFloor">{isEnglish ? "Ground floor:" : "Parter"}</label>
+              <label htmlFor="groundFloor">{isEnglish ? "Ground floor" : "Parter"}</label>
             </div>
 
             <div>
@@ -190,7 +190,7 @@ const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
                   setFloor(e.target.id);
                 }}
               ></input>
-              <label htmlFor="lastFloor">{isEnglish ? "Last floor:" : "Ultimul etaj"}</label>
+              <label htmlFor="lastFloor">{isEnglish ? "Last floor" : "Ultimul etaj"}</label>
             </div>
           </div>
 
@@ -207,7 +207,7 @@ const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
                   setCondition(e.target.id);
                 }}
               ></input>
-              <label htmlFor="shell">{isEnglish ? "Shell stage:" : "Necesită renovări majore"}</label>
+              <label htmlFor="shell">{isEnglish ? "Shell stage" : "Necesită renovări majore"}</label>
             </div>
 
             <div>
@@ -220,7 +220,7 @@ const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
                   setCondition(e.target.id);
                 }}
               ></input>
-              <label htmlFor="finish">{isEnglish ? "Finish stage:" : "Finisat, nemobilat"}</label>
+              <label htmlFor="finish">{isEnglish ? "Finish stage" : "Finisat, nemobilat"}</label>
             </div>
 
             <div>
@@ -233,7 +233,7 @@ const Form = ({ transmitToApp, neighbourhood, isEnglish }) => {
                   setCondition(e.target.id);
                 }}
               ></input>
-              <label htmlFor="turnkey">{isEnglish ? "Turnkey:" : "La gata"}</label>
+              <label htmlFor="turnkey">{isEnglish ? "Turnkey" : "La gata"}</label>
             </div>
           </div>
         </section>
