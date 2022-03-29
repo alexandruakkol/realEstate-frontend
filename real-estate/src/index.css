@@ -34,7 +34,7 @@ header {
   height: 70px;
   background-color: var(--colorHeader);
   font-size: 25px;
-  line-height: 7vh;
+  line-height: 70px;
   width: 100vw;
 }
 
@@ -42,7 +42,6 @@ header {
 .leftHeader > *,
 .logo {
   max-height: 100%;
-  position:relative;
 }
 .rightHeader,
 .leftHeader {
@@ -63,13 +62,16 @@ header {
 }
 .logoDiv {
   display: inline-block;
+  height:60px;
 }
 .logo {
+  margin-bottom:5px;
   display: inline-block;
   width: 60px;
   height: 60px;
 }
 .logoText {
+  vertical-align: middle;
   display: inline-block;
   font-family: "Encode Sans SC", sans-serif;
   color: var(--color1);
