@@ -30,7 +30,7 @@ body {
 }
 header {
   display: grid;
-  grid-template-columns: 50fr 50fr;
+  grid-template-columns: 60fr 40fr;
   position: fixed;
   height: 70px;
   background-color: var(--colorHeader);
@@ -125,7 +125,7 @@ header {
   height: 130vh;
 }
 #rightDiv {
-  background-position: 0px 110px;
+  background-position: 0px 107px;
   background-image: url("https://images.unsplash.com/photo-1604565629118-07dbd99233c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
 }
 
@@ -381,11 +381,19 @@ a {
   margin-top: 200px;
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 850px) {
   .leftDiv {
     width: 100vh;
   }
-  .mainTitle {
-    font-size: 10px;
+  .mainTitle{
+    width:calc(80vw - 50px);
+    font-size: clamp(1rem, 10vw, 4rem); 
+  }
+  .language-btn{
+    padding:0.7vw;
+  }
+  .fa-user,
+  .fa-github{
+    font-size: 3.7vw;
   }
 } ;
