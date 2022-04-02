@@ -1,4 +1,4 @@
 # realEstate-frontend
-Frontend for Bucharest real estate analysis app
+Bucharest real estate valuation app
 <br>
-Deployed on https://bucharest-realestate.netlify.app
+Deployed on bucharestvaluation.com
