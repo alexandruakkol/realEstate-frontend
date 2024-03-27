@@ -1,5 +1,3 @@
 # realEstate-frontend
-Bucharest real estate valuation app,
+Bucharest real estate valuation calculator app.
 <br>
-
-Deployed on www.bucharestvaluation.com
